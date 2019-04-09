@@ -28,6 +28,7 @@ public class BusStation extends Application{
     public static ArrayList<Vehicle> AvailableVehicles = new ArrayList<Vehicle>();
     
     CustomerGUI CustomerPage=new CustomerGUI();
+    ManagerPage.getStage(PrimaryStage);
     
     public void start(Stage PrimaryStage) throws IOException
     {
