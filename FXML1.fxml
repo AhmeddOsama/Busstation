@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="342.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bus_Station.Controller">
+   <children>
+      <Label alignment="CENTER" layoutX="92.0" layoutY="31.0" prefHeight="73.0" prefWidth="417.0" text="Grand Central Bus Station" textAlignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="135.0" text="Username">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="80.0" layoutY="204.0" text="Password">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="PasswordField" layoutX="220.0" layoutY="203.0" />
+      <TextField fx:id="UserNameField" layoutX="220.0" layoutY="134.0" />
+      <Button fx:id="login" layoutX="220.0" layoutY="277.0" mnemonicParsing="false" onAction="#LoginButtonClicked" prefHeight="37.0" prefWidth="107.0" text="Login" />
+      <Button layoutX="342.0" layoutY="277.0" mnemonicParsing="false" text="Sign Up" />
+      <RadioButton layoutX="414.0" layoutY="144.0" mnemonicParsing="false" onAction="#IdentityType" text="Passenger">
+         <toggleGroup>
+            <ToggleGroup fx:id="IdentityToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="414.0" layoutY="171.0" mnemonicParsing="false" onAction="#IdentityType" text="Manager" toggleGroup="$IdentityToggleGroup" />
+      <RadioButton layoutX="414.0" layoutY="196.0" mnemonicParsing="false" onAction="#IdentityType" prefHeight="0.0" prefWidth="87.0" text="Driver" toggleGroup="$IdentityToggleGroup" />
+   </children>
+</AnchorPane>
