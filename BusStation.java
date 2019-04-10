@@ -28,23 +28,35 @@ public class BusStation extends Application{
     public static ArrayList<Vehicle> AvailableVehicles = new ArrayList<Vehicle>();
     
     CustomerGUI CustomerPage=new CustomerGUI();
-    ManagerPage.getStage(PrimaryStage);
+    ManagerGUI ManagerPage=new ManagerGUI();
+    Logout logout = new Logout();
+            
     
     public void start(Stage PrimaryStage) throws IOException
     {
         Parent root = FXMLLoader.load(getClass().getResource("FXML1.fxml"));
         CustomerPage.getStage(PrimaryStage);
+        ManagerPage.getStage(PrimaryStage);//new
+        logout.getStage(PrimaryStage);//new
+       
         Controller.getCustomer(CustomerPage);
-        
+        Controller.getManager(ManagerPage);//new
+        Controller.getLogout(logout);
         PrimaryStage.setTitle("Hi man");
         PrimaryStage.setScene(new Scene(root,600,300));
         PrimaryStage.show();
     }
 
-    
     public static void main(String[] args)
     {
         launch(args);
+    }
+    public static Driver getDriver()
+    {
+        Driver AssignedDriver;
+        AssignedDriver=AvailableDrivers.get(0);
+        AvailableDrivers.remove(0);
+        return AssignedDriver;
     }
 
 }
