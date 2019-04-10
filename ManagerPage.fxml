@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Bus_Station.ManagerController">
+   <children>
+      <TabPane layoutX="4.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="what">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab text="Add Trip">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="83.0" prefHeight="23.0" prefWidth="74.0" text="Destination" />
+                        <TextField fx:id="DestinationInput" layoutX="151.0" layoutY="82.0" />
+                        <Label layoutX="32.0" layoutY="113.0" prefHeight="23.0" prefWidth="105.0" text="Number Of Stops" />
+                        <TextField fx:id="StopsInput" layoutX="151.0" layoutY="112.0" prefHeight="25.0" prefWidth="40.0" />
+                        <Label layoutX="32.0" layoutY="200.0" prefHeight="23.0" prefWidth="74.0" text="Departure" />
+                        <TextField fx:id="DepartureDay" layoutX="151.0" layoutY="199.0" prefHeight="25.0" prefWidth="36.0" />
+                        <Label layoutX="32.0" layoutY="235.0" prefHeight="23.0" prefWidth="74.0" text="Arrival" />
+                        <Button fx:id="AddTrip" layoutX="469.0" layoutY="310.0" mnemonicParsing="false" onAction="#addClicked" prefHeight="31.0" prefWidth="96.0" text="Add" />
+                        <Label layoutX="32.0" layoutY="262.0" prefHeight="23.0" prefWidth="74.0" text="Type" />
+                        <RadioButton fx:id="TypeInternal" layoutX="151.0" layoutY="265.0" mnemonicParsing="false" text="Internal">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="AddType" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="246.0" layoutY="265.0" mnemonicParsing="false" text="External" toggleGroup="$AddType" />
+                        <TextField fx:id="ArrivalDay" layoutX="151.0" layoutY="234.0" prefHeight="25.0" prefWidth="36.0" />
+                        <TextField fx:id="DepartureMonth" layoutX="195.0" layoutY="199.0" prefHeight="25.0" prefWidth="36.0" />
+                        <TextField fx:id="DepartureYear" layoutX="246.0" layoutY="199.0" prefHeight="25.0" prefWidth="43.0" />
+                        <TextField fx:id="ArrivalMonth" layoutX="195.0" layoutY="234.0" prefHeight="25.0" prefWidth="36.0" />
+                        <TextField fx:id="ArrivalYear" layoutX="246.0" layoutY="234.0" prefHeight="25.0" prefWidth="43.0" />
+                        <Label layoutX="155.0" layoutY="169.0" text="Day" />
+                        <Label layoutX="246.0" layoutY="169.0" text="Year" />
+                        <Label layoutX="195.0" layoutY="169.0" text="Month" />
+                        <Label layoutX="32.0" layoutY="302.0" text="Vehicle" />
+                        <RadioButton layoutX="152.0" layoutY="302.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="46.0" text="Bus">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="VehicleType" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton layoutX="208.0" layoutY="302.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="56.0" text="Limo" toggleGroup="$VehicleType" />
+                        <RadioButton layoutX="270.0" layoutY="302.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="76.0" text="MiniBus" toggleGroup="$VehicleType" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
