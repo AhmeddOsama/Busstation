@@ -1,0 +1,8 @@
+public Trip(String Destination,int stops,Time Departure,Time Arrival,Driver driver)
+    {
+         this.Destination=Destination;
+         this.NumberOfStops=stops;
+         this.Departure=Departure;
+         this.Arrival=Arrival;
+         this.Driver=driver;
+    }
