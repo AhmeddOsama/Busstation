@@ -1,0 +1,74 @@
+public static void makeDrivers()
+            {
+                int i;
+                for(i=0;i<10;i++)
+                {
+                    Driver hoss = new Driver("Hossam "+i,"20");
+                    AvailableDrivers.add(hoss);
+                }
+            }
+     public static void makeVehicles()
+             {
+                 int i;
+                 for(i=0;i<10;i++)
+                 {
+                     Limo limo= new Limo();
+                     Bus bus = new Bus();
+                     MiniBus minibus = new MiniBus();
+                     AvailableVehicles.add(bus);
+                     AvailableVehicles.add(limo);
+                     AvailableVehicles.add(minibus);
+                 }
+             }
+    public static Driver getDriver(String driver)
+    {
+        int i;
+        Driver assigned ;
+       
+        for(i=0;i<AvailableDrivers.size();i++)
+        {
+            
+         if(AvailableDrivers.get(i).Name.equalsIgnoreCase(driver))
+         {
+             System.out.println("done and string "+driver);
+             assigned=AvailableDrivers.get(i);
+             AvailableDrivers.remove(i);
+             return assigned;
+         }
+        }
+        return null;
+    }
+ public static Vehicle getVehicle(String type)
+ {
+     int i;
+     Vehicle vehicle;
+     if(type.equalsIgnoreCase("bus"))
+     {
+         vehicle=new Bus();
+        
+     }
+     else if(type.equalsIgnoreCase("limo"))
+     {
+      
+         vehicle= new Limo();
+     } 
+     else if(type.equalsIgnoreCase("minibus"))
+     {
+         
+         vehicle= new MiniBus();
+     }
+     for(i=0;i<AvailableVehicles.size();i++)
+     {
+         if(AvailableVehicles.get(i).type.equalsIgnoreCase(type))
+         {
+             
+             vehicle=AvailableVehicles.get(i);
+         
+             AvailableVehicles.remove(i);
+             return vehicle;
+         }
+     }
+     return null;
+ }
+
+}
